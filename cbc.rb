@@ -23,8 +23,8 @@ class Cbc < Formula
   mumps_dep = (build.with? "mumps") ? ["with-mumps"] : []
   suite_sparse_dep = (build.with? "suite-sparse") ? ["with-suite-sparse"] : []
 
-  depends_on "coin-or-tools/coinor/clp" => (asl_dep + glpk_dep + openblas_dep + mumps_dep + suite_sparse_dep)
-  depends_on "coin-or-tools/coinor/cgl"
+  depends_on "alexeysizanov/coinor/clp" => (asl_dep + glpk_dep + openblas_dep + mumps_dep + suite_sparse_dep)
+  depends_on "alexeysizanov/coinor/cgl"
 
   def install
     args = ["--disable-debug",
